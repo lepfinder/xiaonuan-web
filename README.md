@@ -63,9 +63,11 @@ pnpm build:website
 ```
 打包的输出目录位于 `apps/website/dist` 下。
 
-*   **云端部署至 Cloudflare Pages（推荐，免维护，零成本）**：
+*   **自动部署至 Cloudflare Pages（推荐，一键发布）**：
+    在根目录下直接运行以下命令，即可自动完成编译并部署到 Cloudflare Pages：
     ```bash
-    npx wrangler pages deploy apps/website/dist --project-name xiaonuan-website
+    pnpm deploy:website
+    # 或直接运行 ./deploy.sh
     ```
 *   **本地预览静态站**：
     ```bash

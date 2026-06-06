@@ -6,6 +6,7 @@
     "dev:console": "pnpm --filter @xiaonuan/console dev",
     "dev:website": "pnpm --filter @xiaonuan/website dev",
     "build:console": "pnpm --filter @xiaonuan/console build",
-    "build:website": "pnpm --filter @xiaonuan/website build"
+    "build:website": "pnpm --filter @xiaonuan/website build",
+    "deploy:website": "./deploy.sh"
   }
 }
