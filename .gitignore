@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.DS_Store
+.wrangler/
+
+
+# 数据库文件（包含用户数据，不可提交到 Git）
+*.db
+*.db-shm
+*.db-wal
+
+# 环境变量
+.env
+.env.local
+.env.*.local

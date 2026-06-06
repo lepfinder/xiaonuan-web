@@ -1,0 +1,25 @@
+services:
+  xiaonuan-console:
+    build:
+      context: ./apps/console
+      dockerfile: Dockerfile
+    container_name: xiaonuan-console
+    restart: unless-stopped
+    ports:
+      - "3456:3456"
+    volumes:
+      # 将 SQLite 数据库文件持久化到 NAS 本地目录
+      # 请修改左侧路径为 NAS 上的实际共享文件夹路径
+      # NAS 示例：/volume1/docker/xiaonuan-console/data:/data
+      - ./data:/data
+    environment:
+      - PORT=3456
+      - DATA_DIR=/data
+      # 设置运营控制台访问密码，留空则只允许本地访问
+      - CONSOLE_PASSWORD=${CONSOLE_PASSWORD:-}
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3456/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
