@@ -1,7 +1,5 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  // 官网是静态落地页：index.html + public/{style.css,images,assets}
 })
