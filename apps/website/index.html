@@ -11,6 +11,7 @@
     <meta name="keywords" content="小暖, XiaoNuan, HomeCore, 希扬, lepfinder, 静谧伴读, 从容管家, 时光手账, 家庭 Agent, 家庭管家, 伴学管家, 家庭纪念日, 家庭智能中枢, 本地大模型, Local-First, 私有智能管家, 家庭见闻, AI陪伴">
     <meta name="author" content="希扬 (lepfinder)">
     <meta name="robots" content="index, follow">
+    <meta name="baidu-site-verification" content="codeva-3cgSCkd30W" />
     <meta name="theme-color" content="#1B365D">
     <link rel="canonical" href="https://xiaonuan.me/">
 
@@ -42,7 +43,11 @@
         "@type": "Person",
         "name": "希扬",
         "alternateName": "lepfinder",
-        "url": "https://github.com/lepfinder"
+        "url": "https://xiyang.ai.studio/",
+        "sameAs": [
+          "https://xiyang.ai.studio/",
+          "https://github.com/lepfinder"
+        ]
       }
     }
     </script>
@@ -66,7 +71,11 @@
       "author": {
         "@type": "Person",
         "name": "希扬",
-        "url": "https://github.com/lepfinder"
+        "url": "https://xiyang.ai.studio/",
+        "sameAs": [
+          "https://xiyang.ai.studio/",
+          "https://github.com/lepfinder"
+        ]
       }
     }
     </script>
@@ -130,15 +139,16 @@
 <body>
     <nav class="navbar">
         <div class="container flex-between">
-            <div class="logo">
+            <div class="logo" onclick="switchTab('product', event)" style="cursor: pointer;">
                 <img src="/xiaonuan.png" alt="小暖" class="logo-avatar" width="32" height="32" style="width:32px;height:32px;min-width:32px;max-width:32px;min-height:32px;max-height:32px;object-fit:cover;border-radius:9px;display:block;" />
                 <span class="logo-text">小暖 <span>XiaoNuan</span></span>
             </div>
             <div class="nav-links">
-                <a href="#features">产品特性</a>
-                <a href="#faq">常见问题</a>
+                <a href="#" class="tab-link active" onclick="switchTab('product', event)">产品特性</a>
+                <a href="#" class="tab-link" onclick="switchTab('author', event)">关于作者</a>
+                <a href="#faq" onclick="goFaq(event)">常见问题</a>
                 <a href="#download" class="btn-primary" onclick="goDownload(event)">立即下载</a>
-                <a href="https://github.com/lepfinder/xiaonuan-agent" target="_blank" class="github-link">
+                <a href="https://github.com/lepfinder/xiaonuan-agent" target="_blank" class="github-link" title="GitHub 源码">
                     <i data-lucide="github"></i>
                 </a>
             </div>
@@ -426,6 +436,282 @@
         </section>
     </div>
 
+    <!-- TAB 3: ABOUT AUTHOR -->
+    <div id="tab-author" class="tab-content" hidden>
+        <main class="author-wrapper">
+            <article class="author-article">
+                <!-- 柔和的顶部分类标识 -->
+                <div class="creator-kicker">
+                    <span class="creator-kicker-dot"></span>
+                    <span>造物手记 · Creator Story</span>
+                </div>
+
+                <!-- 创作者个人名片区 -->
+                <section class="dossier-hero">
+                    <div class="dossier-profile-main">
+                        <div class="dossier-author-header">
+                            <img src="/images/author/xiyang_avatar.png" alt="希扬头像" class="dossier-avatar" />
+                            <div class="dossier-title-area">
+                                <h1>希扬 <span style="font-size: 18px; font-weight: 600; color: #6b6a64;">lepfinder</span></h1>
+                                <div class="dossier-role-tag">
+                                    <i data-lucide="sparkles" style="width: 13px; height: 13px;"></i>
+                                    15+ 年程序员 / 架构师 · 两个孩子的父亲
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dossier-manifesto">
+                            “一个老程序员，两个孩子的父亲。<br>
+                            专注 AI Coding、AI 产品实测与本地化（Local-First）工具链，关注家庭教育、系统感知与个人知识成长，分享行业新知与一线真实经验。<br>
+                            有点理想，还想继续折腾一下。”
+                        </div>
+
+                        <div class="dossier-links">
+                            <a href="https://xiyang.ai.studio/" target="_blank" class="dossier-link-badge" rel="noreferrer">
+                                <i data-lucide="globe" style="width: 13px; height: 13px; color: #1B365D;"></i>
+                                xiyang.ai.studio
+                            </a>
+                            <a href="https://github.com/lepfinder" target="_blank" class="dossier-link-badge" rel="noreferrer">
+                                <i data-lucide="github" style="width: 13px; height: 13px; color: #1B365D;"></i>
+                                github.com/lepfinder
+                            </a>
+                            <div class="dossier-link-badge">
+                                <i data-lucide="map-pin" style="width: 13px; height: 13px; color: #1B365D;"></i>
+                                北京 · 中国
+                            </div>
+                            <a href="mailto:sdlgxxy@gmail.com" class="dossier-link-badge">
+                                <i data-lucide="mail" style="width: 13px; height: 13px; color: #1B365D;"></i>
+                                sdlgxxy@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 微信名片微卡片 -->
+                    <div class="dossier-qr-card">
+                        <img src="/images/author/wechat.jpg" alt="微信二维码" />
+                        <span><i data-lucide="message-circle" style="width: 12px; height: 12px; vertical-align: -1px; margin-right: 4px;"></i>微信扫码交流</span>
+                    </div>
+                </section>
+
+                <!-- 造物哲学与初心 -->
+                <div class="dossier-section-title">
+                    <span><i data-lucide="compass" style="width: 18px; height: 18px; color: #1B365D; vertical-align: -3px; margin-right: 8px;"></i>造物哲学 · Engineering & Design Philosophy</span>
+                    <span class="count">3 PILLARS</span>
+                </div>
+
+                <div class="philosophy-grid">
+                    <div class="philosophy-card">
+                        <div class="p-tag">PILLAR 01 · 本地优先</div>
+                        <h3>数据归家 · Local-First</h3>
+                        <p>全家的相册照片、财务账本、行程日历与孩子笔记，不该被随意送进云端。代码跑在本机，数据留在本地硬盘，这是对家庭数字隐私最起码的尊重与敬畏。</p>
+                    </div>
+
+                    <div class="philosophy-card">
+                        <div class="p-tag">PILLAR 02 · 静谧克制</div>
+                        <h3>静谧守护 · Quiet Agent</h3>
+                        <p>不搞噱头式弹窗营销，不进行无休止的信息轰炸。好的家庭管家应如知己般静默在后台守护时光手账；在需要时以极高专业度和温和的知性从容打理。</p>
+                    </div>
+
+                    <div class="philosophy-card">
+                        <div class="p-tag">PILLAR 03 · 陪伴成长</div>
+                        <h3>温润陪伴 · Family Growth</h3>
+                        <p>从《背古诗》到小暖伴学，写给家人的工具必须纯净、专注、无广告干扰。比起冰冷的技术指标，我更珍视工程能为家庭真实生活带来的安顿与温度。</p>
+                    </div>
+                </div>
+
+                <!-- 独立产品与开源成果矩阵 -->
+                <div class="dossier-section-title">
+                    <span><i data-lucide="layers" style="width: 18px; height: 18px; color: #1B365D; vertical-align: -3px; margin-right: 8px;"></i>独立产品与开源项目矩阵</span>
+                    <span class="count">6 PRODUCTS</span>
+                </div>
+
+                <div class="author-projects-grid">
+                    <!-- 1. 小暖 -->
+                    <div class="author-project-card">
+                        <div class="author-project-cover">
+                            <img src="/images/author/xiaonuan.jpg" alt="小暖 XiaoNuan 预览" loading="lazy" />
+                        </div>
+                        <div class="author-project-body">
+                            <div>
+                                <div class="author-project-header">
+                                    <h3>小暖 XiaoNuan</h3>
+                                    <span class="author-project-badge">v0.1.43 稳定版</span>
+                                </div>
+                                <p class="author-project-desc">极客专属的本地全功能家庭管家 Agent。一站式管理孩子作业、家庭日程待办、私有相册、知识库、网购订单、火车票行程与财务账本。</p>
+                                <div class="author-project-tags">
+                                    <span class="author-project-tag">家庭 Agent</span>
+                                    <span class="author-project-tag">Local-First</span>
+                                    <span class="author-project-tag">时光手账</span>
+                                    <span class="author-project-tag">多端支持</span>
+                                </div>
+                            </div>
+                            <div class="author-project-links">
+                                <a href="#" onclick="switchTab('product', event)" class="author-project-link">
+                                    <i data-lucide="globe" style="width: 13px; height: 13px;"></i> 返回官网主页
+                                </a>
+                                <a href="https://github.com/lepfinder/xiaonuan-releases" target="_blank" class="author-project-link" rel="noreferrer">
+                                    <i data-lucide="download" style="width: 13px; height: 13px;"></i> Releases 下载
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. AgentDeck -->
+                    <div class="author-project-card">
+                        <div class="author-project-cover">
+                            <img src="/images/author/AgentDeck.jpg" alt="AgentDeck 预览" loading="lazy" />
+                        </div>
+                        <div class="author-project-body">
+                            <div>
+                                <div class="author-project-header">
+                                    <h3>AgentDeck</h3>
+                                    <span class="author-project-badge">开源 MIT</span>
+                                </div>
+                                <p class="author-project-desc">Coding Agent 会话采集与分析聚合中心。原生支持 Cursor、Claude Code、Codex、Antigravity 等 6 款 AI 编程工具，提供标准 API 实现自动化评审与知识洞察。</p>
+                                <div class="author-project-tags">
+                                    <span class="author-project-tag">Coding Agent</span>
+                                    <span class="author-project-tag">Developer Tools</span>
+                                    <span class="author-project-tag">Session Hub</span>
+                                </div>
+                            </div>
+                            <div class="author-project-links">
+                                <a href="https://github.com/lepfinder/AgentDeck" target="_blank" class="author-project-link" rel="noreferrer">
+                                    <i data-lucide="github" style="width: 13px; height: 13px;"></i> GitHub 源码
+                                </a>
+                                <a href="https://github.com/lepfinder/AgentDeck/releases" target="_blank" class="author-project-link" rel="noreferrer">
+                                    <i data-lucide="download" style="width: 13px; height: 13px;"></i> 安装包下载
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Eva -->
+                    <div class="author-project-card">
+                        <div class="author-project-cover">
+                            <img src="/images/author/eva.jpg" alt="Eva 预览" loading="lazy" />
+                        </div>
+                        <div class="author-project-body">
+                            <div>
+                                <div class="author-project-header">
+                                    <h3>Eva</h3>
+                                    <span class="author-project-badge">开源 MIT</span>
+                                </div>
+                                <p class="author-project-desc">轻量级本地活动采集与系统级数据底座。自动记录剪贴板历史与系统活动轨迹，纯本地运行，为上层 AI Agent 提供高保真上下文感知支撑。</p>
+                                <div class="author-project-tags">
+                                    <span class="author-project-tag">系统感知</span>
+                                    <span class="author-project-tag">活动轨迹</span>
+                                    <span class="author-project-tag">Agent Context</span>
+                                </div>
+                            </div>
+                            <div class="author-project-links">
+                                <a href="https://github.com/lepfinder/eva" target="_blank" class="author-project-link" rel="noreferrer">
+                                    <i data-lucide="github" style="width: 13px; height: 13px;"></i> GitHub 源码
+                                </a>
+                                <a href="https://github.com/lepfinder/eva/releases" target="_blank" class="author-project-link" rel="noreferrer">
+                                    <i data-lucide="download" style="width: 13px; height: 13px;"></i> Releases 下载
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. 背古诗 -->
+                    <div class="author-project-card">
+                        <div class="author-project-cover">
+                            <img src="/images/author/beigushi.jpg" alt="背古诗 预览" loading="lazy" />
+                        </div>
+                        <div class="author-project-body">
+                            <div>
+                                <div class="author-project-header">
+                                    <h3>背古诗 (beigushi)</h3>
+                                    <span class="author-project-badge">纯净公益</span>
+                                </div>
+                                <p class="author-project-desc">中小学课内古诗文速查与背诵助手。完整权威收录中小学必背古诗词与重点课文节选，按年级学期精准结构化检索，纯净免费、无广告干扰。</p>
+                                <div class="author-project-tags">
+                                    <span class="author-project-tag">儿童教育</span>
+                                    <span class="author-project-tag">课内古诗词</span>
+                                    <span class="author-project-tag">零广告干扰</span>
+                                </div>
+                            </div>
+                            <div class="author-project-links">
+                                <a href="https://beigushi.ai.studio/" target="_blank" class="author-project-link" rel="noreferrer">
+                                    <i data-lucide="external-link" style="width: 13px; height: 13px;"></i> 在线体验
+                                </a>
+                                <a href="https://github.com/lepfinder/beigushi" target="_blank" class="author-project-link" rel="noreferrer">
+                                    <i data-lucide="github" style="width: 13px; height: 13px;"></i> GitHub 源码
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. VoxLab -->
+                    <div class="author-project-card">
+                        <div class="author-project-cover">
+                            <img src="/images/author/voxlab.jpg" alt="VoxLab 预览" loading="lazy" />
+                        </div>
+                        <div class="author-project-body">
+                            <div>
+                                <div class="author-project-header">
+                                    <h3>VoxLab</h3>
+                                    <span class="author-project-badge">实验平台</span>
+                                </div>
+                                <p class="author-project-desc">本地化语音技术实验平台与 Agent 语音底座。聚合多款主流本地 ASR 语音识别与 TTS 语音合成模型，兼顾低延迟与高音质，支持实时语音聊天与有声书生产。</p>
+                                <div class="author-project-tags">
+                                    <span class="author-project-tag">本地语音</span>
+                                    <span class="author-project-tag">ASR / TTS</span>
+                                    <span class="author-project-tag">语音 Agent</span>
+                                </div>
+                            </div>
+                            <div class="author-project-links">
+                                <a href="https://github.com/lepfinder/VoxLab" target="_blank" class="author-project-link" rel="noreferrer">
+                                    <i data-lucide="github" style="width: 13px; height: 13px;"></i> GitHub 源码
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Tappy -->
+                    <div class="author-project-card">
+                        <div class="author-project-cover">
+                            <img src="/images/author/tappy.jpg" alt="Tappy 预览" loading="lazy" />
+                        </div>
+                        <div class="author-project-body">
+                            <div>
+                                <div class="author-project-header">
+                                    <h3>Tappy</h3>
+                                    <span class="author-project-badge">开源 MIT</span>
+                                </div>
+                                <p class="author-project-desc">极简无干扰的打字与指法练习 Web 工具。即开即练，零干扰纯粹界面，帮助随时随地磨练打字手感与速度肌肉记忆。</p>
+                                <div class="author-project-tags">
+                                    <span class="author-project-tag">打字练习</span>
+                                    <span class="author-project-tag">Web 工具</span>
+                                    <span class="author-project-tag">极简纯粹</span>
+                                </div>
+                            </div>
+                            <div class="author-project-links">
+                                <a href="https://typing.ai.studio/" target="_blank" class="author-project-link" rel="noreferrer">
+                                    <i data-lucide="external-link" style="width: 13px; height: 13px;"></i> 在线练习
+                                </a>
+                                <a href="https://github.com/lepfinder/Tappy" target="_blank" class="author-project-link" rel="noreferrer">
+                                    <i data-lucide="github" style="width: 13px; height: 13px;"></i> GitHub 源码
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 底部印章与致谢 -->
+                <footer class="dossier-colophon">
+                    <div class="dossier-seal">
+                        「 以技术的严谨，守护日常的温存 」
+                    </div>
+                    <div>
+                        © 2026 希扬 (lepfinder). Crafted with love for family & engineering.
+                    </div>
+                </footer>
+            </article>
+        </main>
+    </div>
+
     <!-- TAB 2: STORYBOOK PAGE（人设过时，入口暂时隐藏） -->
     <div id="tab-story" class="tab-content" hidden>
         <header class="story-hero">
@@ -655,6 +941,7 @@
                 if (tabId === 'story') {
                     setTimeout(triggerScrollDetect, 100);
                 }
+                setTimeout(() => lucide.createIcons(), 50);
             }
 
             if (!options || options.scroll !== false) {
@@ -670,6 +957,17 @@
             }
             requestAnimationFrame(() => {
                 document.getElementById('download').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }
+
+        function goFaq(event) {
+            if (event) event.preventDefault();
+            const productTab = document.getElementById('tab-product');
+            if (!productTab.classList.contains('active')) {
+                switchTab('product', null, { scroll: false });
+            }
+            requestAnimationFrame(() => {
+                document.getElementById('faq').scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         }
 

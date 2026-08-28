@@ -659,6 +659,406 @@ body {
     }
 }
 
+/* ==========================================================================
+   KAMI AUTHOR DOSSIER & PORTFOLIO STYLES
+   ========================================================================== */
+
+.author-wrapper {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 130px 24px 100px;
+}
+
+.author-article {
+    background: #faf9f5;
+    border: 1px solid #e8e6dc;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px -4px rgba(27, 54, 93, 0.06);
+    padding: 48px 52px;
+    color: #141413;
+}
+
+/* 顶部温润分类徽章 */
+.creator-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #1B365D;
+    background: #eaf1f8;
+    padding: 5px 14px;
+    border-radius: 999px;
+    margin-bottom: 28px;
+    letter-spacing: 0.03em;
+}
+
+.creator-kicker-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #1B365D;
+    flex-shrink: 0;
+}
+
+/* 创作者名片主区域 */
+.dossier-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 36px;
+    margin-bottom: 40px;
+}
+
+.dossier-profile-main {
+    flex: 1;
+}
+
+.dossier-author-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.dossier-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 16px rgba(27, 54, 93, 0.1);
+    flex-shrink: 0;
+}
+
+.dossier-title-area h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #141413;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+}
+
+.dossier-role-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #e4ecf5;
+    color: #1B365D;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 6px;
+}
+
+.dossier-manifesto {
+    background: #ffffff;
+    border: 1px solid #e8e6dc;
+    border-left: 3px solid #1B365D;
+    border-radius: 12px;
+    padding: 18px 22px;
+    font-size: 14.5px;
+    line-height: 1.8;
+    color: #3d3b36;
+    margin-bottom: 20px;
+}
+
+.dossier-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.dossier-link-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #ffffff;
+    border: 1px solid #e8e6dc;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #504e49;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.dossier-link-badge:hover {
+    border-color: #1B365D;
+    color: #1B365D;
+    background: #f4f8fc;
+}
+
+/* 微信名片微卡片 */
+.dossier-qr-card {
+    width: 148px;
+    background: #ffffff;
+    border: 1px solid #e8e6dc;
+    border-radius: 16px;
+    padding: 14px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(27, 54, 93, 0.04);
+    flex-shrink: 0;
+}
+
+.dossier-qr-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.dossier-qr-card span {
+    font-size: 11px;
+    font-weight: 700;
+    color: #1B365D;
+    display: block;
+}
+
+/* 章节标题 */
+.dossier-section-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #141413;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e8e6dc;
+    letter-spacing: -0.3px;
+}
+
+.dossier-section-title span.count {
+    font-size: 12px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    color: #6b6a64;
+    background: #ffffff;
+    border: 1px solid #e8e6dc;
+    padding: 3px 10px;
+    border-radius: 999px;
+}
+
+/* 造物哲学三立柱 */
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 40px;
+}
+
+.philosophy-card {
+    background: #ffffff;
+    border: 1px solid #e8e6dc;
+    border-radius: 16px;
+    padding: 22px;
+    position: relative;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.philosophy-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(27, 54, 93, 0.06);
+    border-color: #1B365D;
+}
+
+.philosophy-card .p-tag {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #1B365D;
+    margin-bottom: 8px;
+}
+
+.philosophy-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #141413;
+    margin-bottom: 10px;
+}
+
+.philosophy-card p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #504e49;
+}
+
+/* 作品矩阵卡片 */
+.author-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.author-project-card {
+    background: #ffffff;
+    border: 1px solid #e8e6dc;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.author-project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(27, 54, 93, 0.08);
+    border-color: #1B365D;
+}
+
+.author-project-cover {
+    width: 100%;
+    height: 180px;
+    background: #edece6;
+    overflow: hidden;
+    position: relative;
+}
+
+.author-project-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.author-project-card:hover .author-project-cover img {
+    transform: scale(1.03);
+}
+
+.author-project-body {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.author-project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.author-project-header h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #141413;
+}
+
+.author-project-badge {
+    font-size: 11px;
+    font-weight: 700;
+    color: #1B365D;
+    background: #e4ecf5;
+    padding: 2px 8px;
+    border-radius: 6px;
+}
+
+.author-project-desc {
+    font-size: 13px;
+    color: #504e49;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.author-project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.author-project-tag {
+    font-size: 11px;
+    font-weight: 600;
+    color: #6b6a64;
+    background: #faf9f5;
+    border: 1px solid #e8e6dc;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.author-project-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid #f0eee6;
+}
+
+.author-project-link {
+    font-size: 12px;
+    font-weight: 700;
+    color: #1B365D;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.2s ease;
+}
+
+.author-project-link:hover {
+    color: #d97706;
+}
+
+/* 结语印章 */
+.dossier-colophon {
+    margin-top: 48px;
+    padding-top: 28px;
+    border-top: 1px solid #e8e6dc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #6b6a64;
+}
+
+.dossier-seal {
+    font-family: 'Noto Serif SC', 'Songti SC', Charter, Georgia, serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #141413;
+}
+
+@media (max-width: 840px) {
+    .author-wrapper {
+        padding: 100px 16px 60px;
+    }
+    .author-article {
+        padding: 28px 20px;
+    }
+    .dossier-hero {
+        flex-direction: column;
+    }
+    .dossier-qr-card {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        text-align: left;
+    }
+    .dossier-qr-card img {
+        width: 80px;
+        margin-bottom: 0;
+    }
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+    .author-projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .dossier-colophon {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+}
+
 /* Lightbox */
 .lightbox {
     position: fixed;
