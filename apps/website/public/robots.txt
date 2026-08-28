@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xiaonuan.me/sitemap.xml
