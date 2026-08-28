@@ -171,7 +171,7 @@
     <div id="tab-product" class="tab-content active">
         <header class="hero">
             <div class="container hero-copy">
-                <p class="hero-kicker">XiaoNuan Home Core · v0.1.43</p>
+                <p class="hero-kicker">XiaoNuan Home Core · <span class="app-version-tag">v0.1.44</span></p>
                 <h1 class="hero-title">不慌不忙，<br><span class="accent">温暖如初</span><span class="sr-only"> - 静谧伴读，从容管家 · 沉淀全家知识与时光手账</span></h1>
                 <p class="hero-subtitle">静谧伴读，从容管家 · 沉淀全家知识与时光手账。本地优先（Local-First）的私有家庭智能中枢，对话、见闻、日历、待办、相册、账本、订单、出行——一家的日子，都收在这一处。</p>
                 <div class="hero-actions">
@@ -386,30 +386,30 @@
         <section id="download" class="download">
             <div class="container">
                 <h2 class="section-title text-center">把小暖请回家</h2>
-                <p class="section-lead text-center">当前版本 v0.1.43。安装后数据保存在本机，可按需接入微信与家庭设备。</p>
+                <p class="section-lead text-center">当前版本 <span class="app-version-tag">v0.1.44</span>。安装后数据保存在本机，可按需接入微信与家庭设备。</p>
                 <div class="download-grid">
-                    <a class="download-card"
-                        href="https://github.com/lepfinder/xiaonuan-releases/releases/latest/download/XiaoNuan-0.1.43-arm64.dmg">
+                    <a class="download-card" id="download-arm64"
+                        href="https://github.com/lepfinder/xiaonuan-releases/releases/latest/download/XiaoNuan-0.1.44-arm64.dmg">
                         <div class="download-icon"><i data-lucide="apple"></i></div>
                         <div>
                             <h3>macOS · Apple Silicon</h3>
-                            <p>M1 / M2 / M3 / M4 · XiaoNuan-0.1.43-arm64.dmg</p>
+                            <p>M1 / M2 / M3 / M4 · <span class="arm64-filename">XiaoNuan-0.1.44-arm64.dmg</span></p>
                         </div>
                     </a>
-                    <a class="download-card"
-                        href="https://github.com/lepfinder/xiaonuan-releases/releases/latest/download/XiaoNuan-0.1.43.dmg">
+                    <a class="download-card" id="download-intel"
+                        href="https://github.com/lepfinder/xiaonuan-releases/releases/latest/download/XiaoNuan-0.1.44.dmg">
                         <div class="download-icon"><i data-lucide="apple"></i></div>
                         <div>
                             <h3>macOS · Intel</h3>
-                            <p>Intel 芯片 · XiaoNuan-0.1.43.dmg</p>
+                            <p>Intel 芯片 · <span class="intel-filename">XiaoNuan-0.1.44.dmg</span></p>
                         </div>
                     </a>
-                    <a class="download-card"
-                        href="https://github.com/lepfinder/xiaonuan-releases/releases/latest/download/XiaoNuan.Setup.0.1.43.exe">
+                    <a class="download-card" id="download-win"
+                        href="https://github.com/lepfinder/xiaonuan-releases/releases/latest/download/XiaoNuan.Setup.0.1.44.exe">
                         <div class="download-icon"><i data-lucide="app-window"></i></div>
                         <div>
                             <h3>Windows</h3>
-                            <p>安装包 · XiaoNuan.Setup.0.1.43.exe</p>
+                            <p>安装包 · <span class="win-filename">XiaoNuan.Setup.0.1.44.exe</span></p>
                         </div>
                     </a>
                 </div>
@@ -547,7 +547,7 @@
                             <div>
                                 <div class="author-project-header">
                                     <h3>小暖 XiaoNuan</h3>
-                                    <span class="author-project-badge">v0.1.43 稳定版</span>
+                                    <span class="author-project-badge app-version-badge">v0.1.44 稳定版</span>
                                 </div>
                                 <p class="author-project-desc">极客专属的本地全功能家庭管家 Agent。一站式管理孩子作业、家庭日程待办、私有相册、知识库、网购订单、火车票行程与财务账本。</p>
                                 <div class="author-project-tags">
@@ -1080,9 +1080,61 @@
             start();
         }
 
+        function syncLatestRelease() {
+            const API_URL = 'https://api.github.com/repos/lepfinder/xiaonuan-releases/releases/latest';
+            fetch(API_URL)
+                .then(res => {
+                    if (!res.ok) throw new Error('Failed to fetch release info');
+                    return res.json();
+                })
+                .then(data => {
+                    if (!data || !data.tag_name) return;
+                    const version = data.tag_name.replace(/^v/, '').trim();
+                    if (!version) return;
+
+                    // 1. 同步全站所有版本标签
+                    document.querySelectorAll('.app-version-tag').forEach(el => {
+                        el.textContent = `v${version}`;
+                    });
+                    document.querySelectorAll('.app-version-badge').forEach(el => {
+                        el.textContent = `v${version} 稳定版`;
+                    });
+
+                    // 2. 动态定位 assets 或构造最新下载链接
+                    const assets = Array.isArray(data.assets) ? data.assets : [];
+                    const arm64Asset = assets.find(a => a.name && a.name.includes('arm64') && a.name.endsWith('.dmg'));
+                    const intelAsset = assets.find(a => a.name && !a.name.includes('arm64') && a.name.endsWith('.dmg'));
+                    const winAsset = assets.find(a => a.name && a.name.endsWith('.exe'));
+
+                    const arm64Filename = arm64Asset?.name || `XiaoNuan-${version}-arm64.dmg`;
+                    const intelFilename = intelAsset?.name || `XiaoNuan-${version}.dmg`;
+                    const winFilename = winAsset?.name || `XiaoNuan.Setup.${version}.exe`;
+
+                    const arm64Link = document.getElementById('download-arm64');
+                    const arm64Name = document.querySelector('.arm64-filename');
+                    const intelLink = document.getElementById('download-intel');
+                    const intelName = document.querySelector('.intel-filename');
+                    const winLink = document.getElementById('download-win');
+                    const winName = document.querySelector('.win-filename');
+
+                    if (arm64Link) arm64Link.href = arm64Asset?.browser_download_url || `https://github.com/lepfinder/xiaonuan-releases/releases/latest/download/${arm64Filename}`;
+                    if (arm64Name) arm64Name.textContent = arm64Filename;
+
+                    if (intelLink) intelLink.href = intelAsset?.browser_download_url || `https://github.com/lepfinder/xiaonuan-releases/releases/latest/download/${intelFilename}`;
+                    if (intelName) intelName.textContent = intelFilename;
+
+                    if (winLink) winLink.href = winAsset?.browser_download_url || `https://github.com/lepfinder/xiaonuan-releases/releases/latest/download/${winFilename}`;
+                    if (winName) winName.textContent = winFilename;
+                })
+                .catch(err => {
+                    console.debug('[ReleaseSync] Using static fallback:', err);
+                });
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             triggerScrollDetect();
             initHeroCarousel();
+            syncLatestRelease();
         });
     </script>
 </body>
