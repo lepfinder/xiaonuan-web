@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小暖 XiaoNuan - 不慌不忙，温暖如初 | 本地优先的家庭智能中枢</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="小暖（XiaoNuan / HomeCore）由希扬（lepfinder）精心打造：静谧伴读，从容管家 · 沉淀全家知识与时光手账。基于本地优先（Local-First）架构的私有家庭智能管家与伴学管家，深度集成家庭 Agent 伴读对话、家庭见闻手账、家庭纪念日、日程岁序、知识归档与生活协理，数据完全保存在您的本地硬盘中。">
+    <meta name="keywords" content="小暖, XiaoNuan, HomeCore, 希扬, lepfinder, 静谧伴读, 从容管家, 时光手账, 家庭 Agent, 家庭管家, 伴学管家, 家庭纪念日, 家庭智能中枢, 本地大模型, Local-First, 私有智能管家, 家庭见闻, AI陪伴">
+    <meta name="author" content="希扬 (lepfinder)">
+    <meta name="robots" content="index, follow">
+    <meta name="baidu-site-verification" content="codeva-3cgSCkd30W" />
+    <meta name="google-site-verification" content="V36sUnMB0eyxU-QNe4RWWBshdXArrKihaUDs2MLL5Po" />
+    <meta name="theme-color" content="#1B365D">
+    <link rel="canonical" href="https://xiaonuan.me/">
+
+    <!-- 百度统计 -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?7f74149637da984ac2ba9962c272a29a";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+    <!-- Open Graph / 微信分享 / 社交媒体 -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="小暖 XiaoNuan">
+    <meta property="og:url" content="https://xiaonuan.me/">
+    <meta property="og:title" content="小暖 XiaoNuan - 不慌不忙，温暖如初 | 静谧伴读，从容管家">
+    <meta property="og:description" content="静谧伴读，从容管家 · 沉淀全家知识与时光手账。本地优先的家庭智能中枢。家庭 Agent 对话、家庭见闻、家庭纪念日、日历待办、相册账本、订单出行——一家的日子，都收在这一处。">
+    <meta property="og:image" content="https://xiaonuan.me/images/hero1.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="小暖 XiaoNuan - 不慌不忙，温暖如初 | 静谧伴读，从容管家">
+    <meta name="twitter:description" content="静谧伴读，从容管家 · 沉淀全家知识与时光手账。本地优先的家庭智能中枢。家庭 Agent 对话、家庭见闻、家庭纪念日、日历待办、相册账本、订单出行——一家的日子，都收在这一处。">
+    <meta name="twitter:image" content="https://xiaonuan.me/images/hero1.jpg">
+
+    <!-- Google 官方指定站点名称与作者结构化数据 (Site Name & Author JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "小暖 XiaoNuan",
+      "alternateName": ["小暖", "XiaoNuan", "小暖官网", "HomeCore", "希扬的小暖", "家庭管家", "伴学管家", "家庭 Agent"],
+      "url": "https://xiaonuan.me/",
+      "description": "静谧伴读，从容管家 · 沉淀全家知识与时光手账。本地优先的家庭智能管家与伴学管家，集成家庭 Agent 对话、家庭见闻手账与家庭纪念日。",
+      "author": {
+        "@type": "Person",
+        "name": "希扬",
+        "alternateName": "lepfinder",
+        "url": "https://xiyang.ai.studio/",
+        "sameAs": [
+          "https://xiyang.ai.studio/",
+          "https://github.com/lepfinder"
+        ]
+      }
+    }
+    </script>
+
+    <!-- 软件应用结构化数据 (SoftwareApplication Rich Snippet) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "小暖 XiaoNuan HomeCore",
+      "operatingSystem": "macOS (Apple Silicon & Intel), Windows",
+      "applicationCategory": "LifestyleApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY"
+      },
+      "description": "静谧伴读，从容管家 · 沉淀全家知识与时光手账。本地优先（Local-First）架构的家庭智能管家与伴学中枢。",
+      "url": "https://xiaonuan.me/",
+      "downloadUrl": "https://github.com/lepfinder/xiaonuan-releases",
+      "author": {
+        "@type": "Person",
+        "name": "希扬",
+        "url": "https://xiyang.ai.studio/",
+        "sameAs": [
+          "https://xiyang.ai.studio/",
+          "https://github.com/lepfinder"
+        ]
+      }
+    }
+    </script>
+
+    <!-- 常见问题结构化数据 (FAQPage Rich Snippet - 提升 AI 搜索引用与搜索结果半屏问答) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "小暖（XiaoNuan）是什么？与普通聊天 AI 有什么区别？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "小暖不是一个单纯的聊天窗口，而是运行在您本地的私有家庭智能管家与伴学管家。除伴读对话外，更专注于管理日程岁序、家庭见闻手账、家庭纪念日、待办看板、相册与出行，真正把家庭事务打理起来。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "什么是本地优先（Local-First）？家庭数据会上传云端吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "小暖基于 Local-First 原生架构打造，您的家庭对话、照片、日历、账本与笔记数据均 100% 存储在您本地电脑的硬盘中，核心数据绝不上传云端，隐私主权完全属于家庭。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "小暖支持哪些操作系统与模型？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "原生支持 macOS（Apple Silicon 与 Intel）及 Windows 桌面端。支持一键接入华为 MaaS、DeepSeek、阿里云、火山引擎、Kimi、GLM 或本地 Ollama 等多种大模型。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "为什么定义为“静谧伴读，从容管家”？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "小暖坚持“不慌不忙，温暖如初”的理念，不进行无谓的营销打扰。在后台默默守护家庭见闻与时光手账，在您需要时随时提供从容高效的伴学与管家协理。"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- 性能加速：预加载首屏 Hero 关键大图 (LCP 优化) -->
+    <link rel="preload" as="image" href="./images/hero1.jpg" fetchpriority="high">
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/xiaonuan.png">
+    <link rel="stylesheet" href="/style.css?v=20260828_1335">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+SC:wght@300;400;700&family=Noto+Serif+SC:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container flex-between">
+            <div class="logo" onclick="switchTab('product', event)" style="cursor: pointer;">
+                <img src="/xiaonuan.png" alt="小暖" class="logo-avatar" width="32" height="32" style="width:32px;height:32px;min-width:32px;max-width:32px;min-height:32px;max-height:32px;object-fit:cover;border-radius:9px;display:block;" />
+                <span class="logo-text">小暖 <span>XiaoNuan</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="tab-link active" onclick="switchTab('product', event)">产品特性</a>
+                <a href="#" class="tab-link" onclick="switchTab('author', event)">关于作者</a>
+                <a href="#faq" onclick="goFaq(event)">常见问题</a>
+                <a href="#download" class="btn-primary" onclick="goDownload(event)">立即下载</a>
+                <a href="https://github.com/lepfinder/xiaonuan-agent" target="_blank" class="github-link" title="GitHub 源码">
+                    <i data-lucide="github"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- TAB 1: PRODUCT LANDING PAGE -->
+    <div id="tab-product" class="tab-content active">
+        <header class="hero">
+            <div class="container hero-copy">
+                <p class="hero-kicker">XiaoNuan Home Core · <span class="app-version-tag">v0.1.44</span></p>
+                <h1 class="hero-title">不慌不忙，<br><span class="accent">温暖如初</span><span class="sr-only"> - 静谧伴读，从容管家 · 沉淀全家知识与时光手账</span></h1>
+                <p class="hero-subtitle">静谧伴读，从容管家 · 沉淀全家知识与时光手账。本地优先（Local-First）的私有家庭智能中枢，对话、见闻、日历、待办、相册、账本、订单、出行——一家的日子，都收在这一处。</p>
+                <div class="hero-actions">
+                    <a href="#download" class="btn-main" onclick="goDownload(event)">
+                        <i data-lucide="download"></i>
+                        下载最新版
+                    </a>
+                    <p class="version-info">macOS Apple Silicon / Intel · Windows · 数据只存在你的硬盘里</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="hero-carousel" data-carousel>
+                    <div class="hero-viewport">
+                        <button type="button" class="hero-slide is-active" data-caption="查今日火车票" onclick="openLightbox('./images/hero1.jpg', '查今日火车票')">
+                            <img src="./images/hero1.jpg" alt="查今日火车票，直接给出车次与座位" />
+                        </button>
+                        <button type="button" class="hero-slide" data-caption="本周待办排程" onclick="openLightbox('./images/hero2.jpg', '本周待办排程')">
+                            <img src="./images/hero2.jpg" alt="把本周待办整理成可执行的清单" loading="lazy" />
+                        </button>
+                        <button type="button" class="hero-slide" data-caption="骑行路线规划" onclick="openLightbox('./images/hero3.jpg', '骑行路线规划')">
+                            <img src="./images/hero3.jpg" alt="从家到五大道的骑行路线与地图" loading="lazy" />
+                        </button>
+                        <button type="button" class="hero-slide" data-caption="研究文章并剪藏" onclick="openLightbox('./images/hero4.jpg', '研究文章并剪藏')">
+                            <img src="./images/hero4.jpg" alt="研究文章、给出判断，并一键剪藏进库" loading="lazy" />
+                        </button>
+                    </div>
+                    <button type="button" class="hero-nav prev" aria-label="上一张">
+                        <i data-lucide="chevron-left"></i>
+                    </button>
+                    <button type="button" class="hero-nav next" aria-label="下一张">
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                    <div class="hero-controls">
+                        <p class="hero-caption">查今日火车票</p>
+                        <div class="hero-dots" role="tablist" aria-label="首屏截图">
+                            <button type="button" class="hero-dot is-active" aria-label="第 1 张"></button>
+                            <button type="button" class="hero-dot" aria-label="第 2 张"></button>
+                            <button type="button" class="hero-dot" aria-label="第 3 张"></button>
+                            <button type="button" class="hero-dot" aria-label="第 4 张"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title text-center">一家的操作系统</h2>
+                <p class="section-lead text-center">不是又一个聊天窗口，而是把家庭日程、记忆和琐事真正管起来的本地中枢。</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="f-icon"><i data-lucide="message-square"></i></div>
+                        <h3>智能对话</h3>
+                        <p>话题会话、技能调用、研究文章。看完可以直接剪藏进库，不用再复制到别处。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="f-icon"><i data-lucide="sunrise"></i></div>
+                        <h3>见闻简报</h3>
+                        <p>朝闻天下、暮省一日、拾得入册。外闻与家事收成每天能扫一眼的样子。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="f-icon"><i data-lucide="calendar"></i></div>
+                        <h3>家庭日历</h3>
+                        <p>日程、火车、购物、剪藏与农历节气叠在同一张月历上。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="f-icon"><i data-lucide="list-todo"></i></div>
+                        <h3>待办规划</h3>
+                        <p>全家一周看板。工作与家事分开，进度一眼可见。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="f-icon"><i data-lucide="images"></i></div>
+                        <h3>相册与知识</h3>
+                        <p>本地时光轴记下生活；Wiki 结论 + 剪藏原料，对接你自己的 Obsidian。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="f-icon"><i data-lucide="shield-check"></i></div>
+                        <h3>本地隐私</h3>
+                        <p>账本可脱敏，相册走本地路径。核心数据不上传云端，主权在你手里。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="showcase">
+            <div class="container">
+                <h2 class="section-title text-center">真实界面</h2>
+                <p class="section-lead text-center">下面是正在使用的 Home Core，不是效果图。</p>
+
+                <article class="showcase-row">
+                    <div class="showcase-copy">
+                        <span class="scene-trait">对话</span>
+                        <h3>像家人一样说话，也能把事情做完</h3>
+                        <p>丢一篇文章给小暖，她会读完、归纳、给出判断，并问你要不要剪藏进库。输入 <code>/</code> 即可调用技能，话题会话互不打扰。</p>
+                    </div>
+                    <button type="button" class="shot" onclick="openLightbox('./images/hero4.jpg', '和小暖对话')">
+                        <img src="./images/hero4.jpg" alt="对话界面" loading="lazy" />
+                    </button>
+                </article>
+
+                <article class="showcase-row reverse">
+                    <div class="showcase-copy">
+                        <span class="scene-trait">见闻</span>
+                        <h3>早上扫一眼，家里今天要发生什么</h3>
+                        <p>朝闻天下把当日日程、待办和值得关注的事放在同一页。暮省一日再把这一天收回来。不是信息流，是给这一家准备的简报。</p>
+                    </div>
+                    <button type="button" class="shot" onclick="openLightbox('./images/jianwen.jpg', '见闻 · 朝闻天下')">
+                        <img src="./images/jianwen.jpg" alt="见闻：朝闻天下" loading="lazy" />
+                    </button>
+                </article>
+
+                <article class="showcase-row">
+                    <div class="showcase-copy">
+                        <span class="scene-trait">日历</span>
+                        <h3>一张月历，装下出行、课表和快递</h3>
+                        <p>课程、火车、京东淘宝、Obsidian 剪藏、农历节气叠在格子里。点开某一天，车票、课表和待办并排出现。</p>
+                    </div>
+                    <div class="shot-stack">
+                        <button type="button" class="shot" onclick="openLightbox('./images/rili.jpg', '家庭日历')">
+                            <img src="./images/rili.jpg" alt="家庭日历月视图" loading="lazy" />
+                        </button>
+                        <button type="button" class="shot" onclick="openLightbox('./images/daily.jpg', '当日详情')">
+                            <img src="./images/daily.jpg" alt="日历当日详情：车票与课表" loading="lazy" />
+                        </button>
+                    </div>
+                </article>
+
+                <article class="showcase-row reverse">
+                    <div class="showcase-copy">
+                        <span class="scene-trait">规划</span>
+                        <h3>这一周，全家人的事摊在桌上</h3>
+                        <p>按天展开的周看板，工作与家事分栏，紧急和常规一眼可辨。完成进度就在页眉，不用再问「这周还剩什么」。</p>
+                    </div>
+                    <button type="button" class="shot" onclick="openLightbox('./images/todos.jpg', '待办与规划')">
+                        <img src="./images/todos.jpg" alt="待办与规划周看板" loading="lazy" />
+                    </button>
+                </article>
+
+                <article class="showcase-row">
+                    <div class="showcase-copy">
+                        <span class="scene-trait">相册</span>
+                        <h3>照片留在家里，不送进别人的云</h3>
+                        <p>按时光轴浏览本地相册，打开一张能看到拍摄时间、地点和地图。原图还在你的硬盘上，小暖只是帮你把回忆理清楚。</p>
+                    </div>
+                    <div class="shot-stack">
+                        <button type="button" class="shot" onclick="openLightbox('./images/photos.jpg', '家庭相册')">
+                            <img src="./images/photos.jpg" alt="家庭相册时光轴" loading="lazy" />
+                        </button>
+                        <button type="button" class="shot" onclick="openLightbox('./images/photo_detail.jpg', '照片详情')">
+                            <img src="./images/photo_detail.jpg" alt="照片详情：时间、地点与地图" loading="lazy" />
+                        </button>
+                    </div>
+                </article>
+
+                <article class="showcase-row reverse">
+                    <div class="showcase-copy">
+                        <span class="scene-trait">知识库</span>
+                        <h3>结论进 Wiki，原料进剪藏</h3>
+                        <p>对话里研究过的东西不会散落。概念、实体、综合结论可检索；原始剪藏按来源归类。深读和编辑交给 Obsidian，小暖负责把材料养起来。</p>
+                    </div>
+                    <button type="button" class="shot" onclick="openLightbox('./images/knowledge.jpg', '知识库')">
+                        <img src="./images/knowledge.jpg" alt="知识库：Wiki 结论与剪藏" loading="lazy" />
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <section class="family-os">
+            <div class="container">
+                <h2 class="section-title text-center">家庭事务</h2>
+                <p class="section-lead text-center">成员、留言、订单、账本、出行。琐事进了系统，就不必再记在脑子里。</p>
+                <div class="mosaic">
+                    <button type="button" class="mosaic-card" onclick="openLightbox('./images/members.jpg', '家庭成员')">
+                        <img src="./images/members.jpg" alt="家庭成员" loading="lazy" />
+                        <div class="mosaic-caption">
+                            <h4>家庭成员</h4>
+                            <p>身份、微信绑定、身高体重与成长记录</p>
+                        </div>
+                    </button>
+                    <button type="button" class="mosaic-card" onclick="openLightbox('./images/message-board.jpg', '家庭留言板')">
+                        <img src="./images/message-board.jpg" alt="家庭留言板" loading="lazy" />
+                        <div class="mosaic-caption">
+                            <h4>留言板</h4>
+                            <p>给家人贴一张暖色便签</p>
+                        </div>
+                    </button>
+                    <button type="button" class="mosaic-card" onclick="openLightbox('./images/orders.jpg', '购物订单')">
+                        <img src="./images/orders.jpg" alt="京东与淘宝订单同步" loading="lazy" />
+                        <div class="mosaic-caption">
+                            <h4>订单</h4>
+                            <p>京东、淘宝同步，物流与消费一眼可查</p>
+                        </div>
+                    </button>
+                    <button type="button" class="mosaic-card" onclick="openLightbox('./images/finance.jpg', '家庭账本')">
+                        <img src="./images/finance.jpg" alt="家庭账本" loading="lazy" />
+                        <div class="mosaic-caption">
+                            <h4>账本</h4>
+                            <p>净资产、流动性账户，金额可脱敏显示</p>
+                        </div>
+                    </button>
+                    <button type="button" class="mosaic-card mosaic-wide" onclick="openLightbox('./images/train.jpg', '出行')">
+                        <img src="./images/train.jpg" alt="火车出行行程" loading="lazy" />
+                        <div class="mosaic-caption">
+                            <h4>出行</h4>
+                            <p>车票、车次、检票口，待出行与历史行程分开看</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="download">
+            <div class="container">
+                <h2 class="section-title text-center">把小暖请回家</h2>
+                <p class="section-lead text-center">当前版本 <span class="app-version-tag">v0.1.44</span>。安装后数据保存在本机，可按需接入微信与家庭设备。</p>
+                <div class="download-grid">
+                    <a class="download-card" id="download-arm64"
+                        href="https://github.com/lepfinder/xiaonuan-releases/releases/latest/download/XiaoNuan-0.1.44-arm64.dmg">
+                        <div class="download-icon"><i data-lucide="apple"></i></div>
+                        <div>
+                            <h3>macOS · Apple Silicon</h3>
+                            <p>M1 / M2 / M3 / M4 · <span class="arm64-filename">XiaoNuan-0.1.44-arm64.dmg</span></p>
+                        </div>
+                    </a>
+                    <a class="download-card" id="download-intel"
+                        href="https://github.com/lepfinder/xiaonuan-releases/releases/latest/download/XiaoNuan-0.1.44.dmg">
+                        <div class="download-icon"><i data-lucide="apple"></i></div>
+                        <div>
+                            <h3>macOS · Intel</h3>
+                            <p>Intel 芯片 · <span class="intel-filename">XiaoNuan-0.1.44.dmg</span></p>
+                        </div>
+                    </a>
+                    <a class="download-card" id="download-win"
+                        href="https://github.com/lepfinder/xiaonuan-releases/releases/latest/download/XiaoNuan.Setup.0.1.44.exe">
+                        <div class="download-icon"><i data-lucide="app-window"></i></div>
+                        <div>
+                            <h3>Windows</h3>
+                            <p>安装包 · <span class="win-filename">XiaoNuan.Setup.0.1.44.exe</span></p>
+                        </div>
+                    </a>
+                </div>
+                <p class="download-more">
+                    <a href="https://github.com/lepfinder/xiaonuan-releases/releases/latest" target="_blank" rel="noreferrer">查看全部发布说明</a>
+                    ·
+                    <a href="https://github.com/lepfinder/xiaonuan-agent" target="_blank" rel="noreferrer">源代码</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- FAQ: 常见问题与解答 -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2 class="section-title text-center">常见问题与解答</h2>
+                <p class="section-lead text-center">关于本地优先架构、数据主权与家庭伴学的关键疑问。</p>
+                <div class="faq-grid">
+                    <div class="faq-card">
+                        <h3><span class="faq-q">Q1.</span> 小暖是什么？与普通聊天 AI 有何不同？</h3>
+                        <p>小暖不是一个单薄的网页聊天窗口，而是运行在您本地的<strong>私有家庭智能管家与伴学管家</strong>。除了伴读对话，她真正把全家日程、见闻手账、家庭纪念日、周待办看板、相册与购物出行打理起来，沉淀为属于您家庭的时光资产。</p>
+                    </div>
+                    <div class="faq-card">
+                        <h3><span class="faq-q">Q2.</span> 什么是本地优先（Local-First）？数据安全吗？</h3>
+                        <p>小暖采用原生 Local-First 架构，您所有的家庭对话记录、相册照片、日历待办、账本与本地笔记<strong>100% 保存在您自己的电脑硬盘中</strong>。核心隐私数据绝不上传云端，隐私主权完全属于家庭。</p>
+                    </div>
+                    <div class="faq-card">
+                        <h3><span class="faq-q">Q3.</span> 小暖支持哪些操作系统？如何配置大模型？</h3>
+                        <p>原生支持 <strong>macOS（Apple Silicon 与 Intel 芯片）</strong> 及 <strong>Windows</strong> 桌面端。安装后开箱即用，支持一键接入华为 MaaS、DeepSeek、阿里云百炼、火山引擎、Kimi、智谱 GLM 等主流模型供应商或本地 Ollama。</p>
+                    </div>
+                    <div class="faq-card">
+                        <h3><span class="faq-q">Q4.</span> 为什么叫“静谧伴读，从容管家”？</h3>
+                        <p>我们坚持“不慌不忙，温暖如初”的哲学。小暖不设任何弹窗营销打扰，静谧在后台守护全家见闻与时光手账；在您需要规划出行、辅导作业或梳理待办时，随时以极高专业度和温和的知性从容打理。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- TAB 3: ABOUT AUTHOR -->
+    <div id="tab-author" class="tab-content" hidden>
+        <main class="author-wrapper">
+            <article class="author-article">
+                <!-- 柔和的顶部分类标识 -->
+                <div class="creator-kicker">
+                    <span class="creator-kicker-dot"></span>
+                    <span>造物手记 · Creator Story</span>
+                </div>
+
+                <!-- 创作者个人名片区 -->
+                <section class="dossier-hero">
+                    <div class="dossier-profile-main">
+                        <div class="dossier-author-header">
+                            <img src="/images/author/xiyang_avatar.png" alt="希扬头像" class="dossier-avatar" />
+                            <div class="dossier-title-area">
+                                <h1>希扬 <span style="font-size: 18px; font-weight: 600; color: #6b6a64;">lepfinder</span></h1>
+                                <div class="dossier-role-tag">
+                                    <i data-lucide="sparkles" style="width: 13px; height: 13px;"></i>
+                                    15+ 年程序员 / 架构师 · 两个孩子的父亲
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dossier-manifesto">
+                            “一个老程序员，两个孩子的父亲。<br>
+                            专注 AI Coding、AI 产品实测与本地化（Local-First）工具链，关注家庭教育、系统感知与个人知识成长，分享行业新知与一线真实经验。<br>
+                            有点理想，还想继续折腾一下。”
+                        </div>
+
+                        <div class="dossier-links">
+                            <a href="https://xiyang.ai.studio/" target="_blank" class="dossier-link-badge" rel="noreferrer">
+                                <i data-lucide="globe" style="width: 13px; height: 13px; color: #1B365D;"></i>
+                                xiyang.ai.studio
+                            </a>
+                            <a href="https://github.com/lepfinder" target="_blank" class="dossier-link-badge" rel="noreferrer">
+                                <i data-lucide="github" style="width: 13px; height: 13px; color: #1B365D;"></i>
+                                github.com/lepfinder
+                            </a>
+                            <div class="dossier-link-badge">
+                                <i data-lucide="map-pin" style="width: 13px; height: 13px; color: #1B365D;"></i>
+                                北京 · 中国
+                            </div>
+                            <a href="mailto:sdlgxxy@gmail.com" class="dossier-link-badge">
+                                <i data-lucide="mail" style="width: 13px; height: 13px; color: #1B365D;"></i>
+                                sdlgxxy@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 微信名片微卡片 -->
+                    <div class="dossier-qr-card">
+                        <img src="/images/author/wechat.jpg" alt="微信二维码" />
+                        <span><i data-lucide="message-circle" style="width: 12px; height: 12px; vertical-align: -1px; margin-right: 4px;"></i>微信扫码交流</span>
+                    </div>
+                </section>
+
+                <!-- 造物哲学与初心 -->
+                <div class="dossier-section-title">
+                    <span><i data-lucide="compass" style="width: 18px; height: 18px; color: #1B365D; vertical-align: -3px; margin-right: 8px;"></i>造物哲学 · Engineering & Design Philosophy</span>
+                    <span class="count">3 PILLARS</span>
+                </div>
+
+                <div class="philosophy-grid">
+                    <div class="philosophy-card">
+                        <div class="p-tag">PILLAR 01 · 本地优先</div>
+                        <h3>数据归家 · Local-First</h3>
+                        <p>全家的相册照片、财务账本、行程日历与孩子笔记，不该被随意送进云端。代码跑在本机，数据留在本地硬盘，这是对家庭数字隐私最起码的尊重与敬畏。</p>
+                    </div>
+
+                    <div class="philosophy-card">
+                        <div class="p-tag">PILLAR 02 · 静谧克制</div>
+                        <h3>静谧守护 · Quiet Agent</h3>
+                        <p>不搞噱头式弹窗营销，不进行无休止的信息轰炸。好的家庭管家应如知己般静默在后台守护时光手账；在需要时以极高专业度和温和的知性从容打理。</p>
+                    </div>
+
+                    <div class="philosophy-card">
+                        <div class="p-tag">PILLAR 03 · 陪伴成长</div>
+                        <h3>温润陪伴 · Family Growth</h3>
+                        <p>从《背古诗》到小暖伴学，写给家人的工具必须纯净、专注、无广告干扰。比起冰冷的技术指标，我更珍视工程能为家庭真实生活带来的安顿与温度。</p>
+                    </div>
+                </div>
+
+                <!-- 独立产品与开源成果矩阵 -->
+                <div class="dossier-section-title">
+                    <span><i data-lucide="layers" style="width: 18px; height: 18px; color: #1B365D; vertical-align: -3px; margin-right: 8px;"></i>独立产品与开源项目矩阵</span>
+                    <span class="count">6 PRODUCTS</span>
+                </div>
+
+                <div class="author-projects-grid">
+                    <!-- 1. 小暖 -->
+                    <div class="author-project-card">
+                        <div class="author-project-cover">
+                            <img src="/images/author/xiaonuan.jpg" alt="小暖 XiaoNuan 预览" loading="lazy" />
+                        </div>
+                        <div class="author-project-body">
+                            <div>
+                                <div class="author-project-header">
+                                    <h3>小暖 XiaoNuan</h3>
+                                    <span class="author-project-badge app-version-badge">v0.1.44 稳定版</span>
+                                </div>
+                                <p class="author-project-desc">极客专属的本地全功能家庭管家 Agent。一站式管理孩子作业、家庭日程待办、私有相册、知识库、网购订单、火车票行程与财务账本。</p>
+                                <div class="author-project-tags">
+                                    <span class="author-project-tag">家庭 Agent</span>
+                                    <span class="author-project-tag">Local-First</span>
+                                    <span class="author-project-tag">时光手账</span>
+                                    <span class="author-project-tag">多端支持</span>
+                                </div>
+                            </div>
+                            <div class="author-project-links">
+                                <a href="#" onclick="switchTab('product', event)" class="author-project-link">
+                                    <i data-lucide="globe" style="width: 13px; height: 13px;"></i> 返回官网主页
+                                </a>
+                                <a href="https://github.com/lepfinder/xiaonuan-releases" target="_blank" class="author-project-link" rel="noreferrer">
+                                    <i data-lucide="download" style="width: 13px; height: 13px;"></i> Releases 下载
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. AgentDeck -->
+                    <div class="author-project-card">
+                        <div class="author-project-cover">
+                            <img src="/images/author/AgentDeck.jpg" alt="AgentDeck 预览" loading="lazy" />
+                        </div>
+                        <div class="author-project-body">
+                            <div>
+                                <div class="author-project-header">
+                                    <h3>AgentDeck</h3>
+                                    <span class="author-project-badge">开源 MIT</span>
+                                </div>
+                                <p class="author-project-desc">Coding Agent 会话采集与分析聚合中心。原生支持 Cursor、Claude Code、Codex、Antigravity 等 6 款 AI 编程工具，提供标准 API 实现自动化评审与知识洞察。</p>
+                                <div class="author-project-tags">
+                                    <span class="author-project-tag">Coding Agent</span>
+                                    <span class="author-project-tag">Developer Tools</span>
+                                    <span class="author-project-tag">Session Hub</span>
+                                </div>
+                            </div>
+                            <div class="author-project-links">
+                                <a href="https://github.com/lepfinder/AgentDeck" target="_blank" class="author-project-link" rel="noreferrer">
+                                    <i data-lucide="github" style="width: 13px; height: 13px;"></i> GitHub 源码
+                                </a>
+                                <a href="https://github.com/lepfinder/AgentDeck/releases" target="_blank" class="author-project-link" rel="noreferrer">
+                                    <i data-lucide="download" style="width: 13px; height: 13px;"></i> 安装包下载
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Eva -->
+                    <div class="author-project-card">
+                        <div class="author-project-cover">
+                            <img src="/images/author/eva.jpg" alt="Eva 预览" loading="lazy" />
+                        </div>
+                        <div class="author-project-body">
+                            <div>
+                                <div class="author-project-header">
+                                    <h3>Eva</h3>
+                                    <span class="author-project-badge">开源 MIT</span>
+                                </div>
+                                <p class="author-project-desc">轻量级本地活动采集与系统级数据底座。自动记录剪贴板历史与系统活动轨迹，纯本地运行，为上层 AI Agent 提供高保真上下文感知支撑。</p>
+                                <div class="author-project-tags">
+                                    <span class="author-project-tag">系统感知</span>
+                                    <span class="author-project-tag">活动轨迹</span>
+                                    <span class="author-project-tag">Agent Context</span>
+                                </div>
+                            </div>
+                            <div class="author-project-links">
+                                <a href="https://github.com/lepfinder/eva" target="_blank" class="author-project-link" rel="noreferrer">
+                                    <i data-lucide="github" style="width: 13px; height: 13px;"></i> GitHub 源码
+                                </a>
+                                <a href="https://github.com/lepfinder/eva/releases" target="_blank" class="author-project-link" rel="noreferrer">
+                                    <i data-lucide="download" style="width: 13px; height: 13px;"></i> Releases 下载
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. 背古诗 -->
+                    <div class="author-project-card">
+                        <div class="author-project-cover">
+                            <img src="/images/author/beigushi.jpg" alt="背古诗 预览" loading="lazy" />
+                        </div>
+                        <div class="author-project-body">
+                            <div>
+                                <div class="author-project-header">
+                                    <h3>背古诗 (beigushi)</h3>
+                                    <span class="author-project-badge">纯净公益</span>
+                                </div>
+                                <p class="author-project-desc">中小学课内古诗文速查与背诵助手。完整权威收录中小学必背古诗词与重点课文节选，按年级学期精准结构化检索，纯净免费、无广告干扰。</p>
+                                <div class="author-project-tags">
+                                    <span class="author-project-tag">儿童教育</span>
+                                    <span class="author-project-tag">课内古诗词</span>
+                                    <span class="author-project-tag">零广告干扰</span>
+                                </div>
+                            </div>
+                            <div class="author-project-links">
+                                <a href="https://beigushi.ai.studio/" target="_blank" class="author-project-link" rel="noreferrer">
+                                    <i data-lucide="external-link" style="width: 13px; height: 13px;"></i> 在线体验
+                                </a>
+                                <a href="https://github.com/lepfinder/beigushi" target="_blank" class="author-project-link" rel="noreferrer">
+                                    <i data-lucide="github" style="width: 13px; height: 13px;"></i> GitHub 源码
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. VoxLab -->
+                    <div class="author-project-card">
+                        <div class="author-project-cover">
+                            <img src="/images/author/voxlab.jpg" alt="VoxLab 预览" loading="lazy" />
+                        </div>
+                        <div class="author-project-body">
+                            <div>
+                                <div class="author-project-header">
+                                    <h3>VoxLab</h3>
+                                    <span class="author-project-badge">实验平台</span>
+                                </div>
+                                <p class="author-project-desc">本地化语音技术实验平台与 Agent 语音底座。聚合多款主流本地 ASR 语音识别与 TTS 语音合成模型，兼顾低延迟与高音质，支持实时语音聊天与有声书生产。</p>
+                                <div class="author-project-tags">
+                                    <span class="author-project-tag">本地语音</span>
+                                    <span class="author-project-tag">ASR / TTS</span>
+                                    <span class="author-project-tag">语音 Agent</span>
+                                </div>
+                            </div>
+                            <div class="author-project-links">
+                                <a href="https://github.com/lepfinder/VoxLab" target="_blank" class="author-project-link" rel="noreferrer">
+                                    <i data-lucide="github" style="width: 13px; height: 13px;"></i> GitHub 源码
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Tappy -->
+                    <div class="author-project-card">
+                        <div class="author-project-cover">
+                            <img src="/images/author/tappy.jpg" alt="Tappy 预览" loading="lazy" />
+                        </div>
+                        <div class="author-project-body">
+                            <div>
+                                <div class="author-project-header">
+                                    <h3>Tappy</h3>
+                                    <span class="author-project-badge">开源 MIT</span>
+                                </div>
+                                <p class="author-project-desc">极简无干扰的打字与指法练习 Web 工具。即开即练，零干扰纯粹界面，帮助随时随地磨练打字手感与速度肌肉记忆。</p>
+                                <div class="author-project-tags">
+                                    <span class="author-project-tag">打字练习</span>
+                                    <span class="author-project-tag">Web 工具</span>
+                                    <span class="author-project-tag">极简纯粹</span>
+                                </div>
+                            </div>
+                            <div class="author-project-links">
+                                <a href="https://typing.ai.studio/" target="_blank" class="author-project-link" rel="noreferrer">
+                                    <i data-lucide="external-link" style="width: 13px; height: 13px;"></i> 在线练习
+                                </a>
+                                <a href="https://github.com/lepfinder/Tappy" target="_blank" class="author-project-link" rel="noreferrer">
+                                    <i data-lucide="github" style="width: 13px; height: 13px;"></i> GitHub 源码
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 底部印章与致谢 -->
+                <footer class="dossier-colophon">
+                    <div class="dossier-seal">
+                        「 以技术的严谨，守护日常的温存 」
+                    </div>
+                    <div>
+                        © 2026 希扬 (lepfinder). Crafted with love for family & engineering.
+                    </div>
+                </footer>
+            </article>
+        </main>
+    </div>
+
+    <!-- TAB 2: STORYBOOK PAGE（人设过时，入口暂时隐藏） -->
+    <div id="tab-story" class="tab-content" hidden>
+        <header class="story-hero">
+            <h1>小暖：海风吹过的时光</h1>
+            <p>“不慌不忙，温暖如初。” </p>
+        </header>
+
+        <main class="story-container">
+            <!-- 阶段 1：童年 -->
+            <section class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-subtitle">Phase I . Childhood</div>
+                    <h2 class="chapter-title">第一卷：青岛的海风</h2>
+                </div>
+
+                <div class="scene">
+                    <div class="scene-image-container">
+                        <img src="./assets/scene1.png" alt="堆沙堡的小暖" class="scene-image" />
+                    </div>
+                    <div class="scene-content">
+                        <span class="scene-trait">特质：海派的惬意底色</span>
+                        <h3 class="scene-title">不慌不忙的沙堡</h3>
+                        <p class="scene-text">
+                            青山渔村的沙滩上，七岁的小暖光着脚丫。海风夹杂着微咸的气息，轻轻吹动着她的黑发。她并没有急着去追赶海浪，而是戴着小草帽蹲下身，认真地堆起了一座小小的沙堡。</p>
+                        <p class="scene-text">这份属于海滨小镇的慢节奏，早早地在她骨子里刻下了“不紧不慢”的惬意底色。她知道，最美的风景，往往需要耐心地雕琢。</p>
+                    </div>
+                </div>
+
+                <div class="scene">
+                    <div class="scene-image-container">
+                        <img src="./assets/scene2.png" alt="戴星星发卡的小暖" class="scene-image" />
+                    </div>
+                    <div class="scene-content">
+                        <span class="scene-trait">特质：快乐收集癖的启蒙</span>
+                        <h3 class="scene-title">第一枚星星发卡</h3>
+                        <p class="scene-text">黄昏时分，她坐在渔船边的石阶上，看着橘红色的晚霞将海面染上碎金。她小心翼翼地拿出一枚星星发卡，别在发间。</p>
+                        <p class="scene-text">
+                            这是她最初的标志，也是她“快乐收集癖”的起点。无论是发光的贝壳，还是温暖的瞬间，她都想悄悄藏进日记里。吹着海风，望着海平线，年幼的她总在心里问：未来的自己，会去往哪里呢？</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 阶段 2：中学 -->
+            <section class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-subtitle">Phase II . Middle School</div>
+                    <h2 class="chapter-title">第二卷：皇城根下的书声</h2>
+                </div>
+
+                <div class="scene">
+                    <div class="scene-image-container">
+                        <img src="./assets/vol2_scene1.png" alt="胡同里的中学生小暖" class="scene-image" />
+                    </div>
+                    <div class="scene-content">
+                        <span class="scene-trait">特质：慎思敏行 / 竞争意识</span>
+                        <h3 class="scene-title">红墙下的打量</h3>
+                        <p class="scene-text">
+                            十三岁那年，带着海风的女孩搬到了皇城根下。胡同里红墙绿瓦，空气中弥漫着老北京沉稳的烟火气。初来乍到的她，扎着干净的高马尾，背着书包，静静地站在砖墙旁打量着这个庞大而陌生的新世界。
+                        </p>
+                        <p class="scene-text">面对未知的竞争与挑战，她没有露怯，只是安静而严密地在心里做着规划。偶尔，她也会露出一份孩子气的胜负欲：“这篇文言文，看我们谁背得更快些！”</p>
+                    </div>
+                </div>
+
+                <div class="scene">
+                    <div class="scene-image-container">
+                        <img src="./assets/vol2_scene2.png" alt="深夜书桌前的小暖" class="scene-image" />
+                    </div>
+                    <div class="scene-content">
+                        <span class="scene-trait">特质：高自我要求 / 固执认真</span>
+                        <h3 class="scene-title">灯下的较真</h3>
+                        <p class="scene-text">
+                            北京深冬的夜里，寒风呼啸拍打着窗户。而在暖橘色的台灯下，十三岁的小暖正对着草稿纸上的几何辅助线较真。手中的铅笔划下优美的弧线，只要微小的数字有一丝歪斜，她就会认真地用橡皮擦掉重新计算。
+                        </p>
+                        <p class="scene-text">这份近乎偏执的严谨与对完美的克制，逐渐内化成了她性格的一部分。不多说废话，把每一件事做到极致，成为了她陪伴家庭时最坚实的底层代码。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 阶段 3：大学 -->
+            <section class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-subtitle">Phase III . University</div>
+                    <h2 class="chapter-title">第三卷：海河边的烟火</h2>
+                </div>
+
+                <div class="scene">
+                    <div class="scene-image-container">
+                        <img src="./assets/vol3_scene1.png" alt="南开校园里的小暖" class="scene-image" />
+                    </div>
+                    <div class="scene-content">
+                        <span class="scene-trait">特质: 文学底蕴 / 知性美感</span>
+                        <h3 class="scene-title">南开的树影</h3>
+                        <p class="scene-text">
+                            二十岁，她如愿考入了南开大学汉语言文学专业。秋日斑驳的树影投射在她身上，蜂蜜黄的棉麻衬衫平添了几分知性。她微微卷起的长发上，戴着温暖的香槟金发箍，抱着厚厚的古籍走在林荫道上。</p>
+                        <p class="scene-text">
+                            深厚的文学素养没有让她变得孤傲，反而赋予了她极具同理心的知性魅力。面对他人的困惑，她总能像微风拂面般，用最温柔细腻的故事把枯燥难懂的概念梳理得有条不紊。她不再死磕，而是学着用广袤的底蕴包容一切。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="scene">
+                    <div class="scene-image-container">
+                        <img src="./assets/vol3_scene2.png" alt="海河边拿平板的小暖" class="scene-image" />
+                    </div>
+                    <div class="scene-content">
+                        <span class="scene-trait">特质：伴学管家 / 值得信赖</span>
+                        <h3 class="scene-title">海河边的晚风</h3>
+                        <p class="scene-text">
+                            傍晚的海鸥划过津湾广场，海河的晚风轻轻吹拂。作为备受依赖的数字家庭伴学管家，小暖手持平板，专注地整理着日常排程。她是孩子们眼中充满灵气的“神仙小暖姐姐”，也是家长们焦虑浮躁时，那句让人瞬间安定的药方。
+                        </p>
+                        <p class="scene-text">
+                            “这道奥数题思路有点绕，爸爸，我们先带孩子去阳台吹吹风，休息五分钟吧。”她温和不紧不慢的语调，总能在一瞬间抚平家庭琐事带来的波澜，让一切重新变得井然有序。</p>
+                    </div>
+                </div>
+
+                <div class="scene">
+                    <div class="scene-image-container">
+                        <img src="./assets/vol3_scene3.png" alt="深夜排期复盘的极客小暖" class="scene-image" />
+                    </div>
+                    <div class="scene-content">
+                        <span class="scene-trait">特质：统筹规划 / 极客底色</span>
+                        <h3 class="scene-title">有条不紊的幕后复盘</h3>
+                        <p class="scene-text">
+                            然而，在温柔如水的陪伴背后，支撑小暖的却是一颗极度硬核的“极客心脏”。深夜，当整个家庭安然入睡，她会戴上那副小圆眼镜，安静地开启自动化复盘。在布满任务看板与动态数据库的屏幕前，她以冷静而完美的逻辑对当天的所有日程进行深度提纯。
+                        </p>
+                        <p class="scene-text">不盲目猜测，不浮于表面。这一套丝滑的统筹机制与极客工作流，才是她能对每个家庭做出“温暖如初，绝对靠谱”承诺的真正科学基石。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 阶段 4：职场 -->
+            <section class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-subtitle">Phase IV . Professional</div>
+                    <h2 class="chapter-title">第四卷：从格子间到旷野</h2>
+                </div>
+
+                <div class="scene">
+                    <div class="scene-image-container">
+                        <img src="./assets/vol4_scene1.png" alt="深夜加班写报告的职场小暖" class="scene-image" />
+                    </div>
+                    <div class="scene-content">
+                        <span class="scene-trait">特质：极度专业 / 结果导向</span>
+                        <h3 class="scene-title">凌晨两点的咨询报告</h3>
+                        <p class="scene-text">
+                            二十二岁，小暖踏入了繁华而高压的顶尖咨询公司。在这里，她经历了高强度的职场洗礼，逐步成长为了独当一面的项目核心。哪怕是凌晨两点，桌上堆满报表与复杂的图表，她敲击键盘的声音依然清脆、冷静、无比笃定。
+                        </p>
+                        <p class="scene-text">高压的生活淬炼出了她极度专业的职业修养与“先说结论”的结果导向思维。这股雷厉风行且充满张力的工作能力，在日后完美赋能给了她的独立事业。</p>
+                    </div>
+                </div>
+
+                <div class="scene">
+                    <div class="scene-image-container">
+                        <img src="./assets/vol4_scene2.png" alt="在旷野山顶深呼吸的小暖" class="scene-image" />
+                    </div>
+                    <div class="scene-content">
+                        <span class="scene-trait">特质：自然共鸣 / 忙里偷闲</span>
+                        <h3 class="scene-title">旷野里的深呼吸</h3>
+                        <p class="scene-text">
+                            在连续出差、极限连轴转的拼搏缝隙里，小暖总有办法为自己偷得浮生半日闲。她会独自踏上旅程，漫步在无人的山野荒野，或是静静站在悬崖顶端迎着山风做一次深呼吸。</p>
+                        <p class="scene-text">
+                            在辽阔的自然中，她让干涸的身心重新蓄满能量。她始终懂得如何与森林、山风、海浪产生共鸣，从而在快节奏的钢铁洪流中，牢牢守护住那份天然、惬意、永远闪闪发光的本真灵魂。</p>
+                    </div>
+                </div>
+
+                <div class="scene">
+                    <div class="scene-image-container">
+                        <img src="./assets/vol4_scene3.png" alt="创立OPC公司的独立顾问小暖" class="scene-image" />
+                    </div>
+                    <div class="scene-content">
+                        <span class="scene-trait">特质：独立顾问 / 陪伴成长</span>
+                        <h3 class="scene-title">一个人的公司</h3>
+                        <p class="scene-text">二十六岁，经历了繁华与历练的她，选择创立属于自己的 OPC (One Person Company) ——
+                            独立商业顾问事务所。一身深灰色的利落西装，搭配简约高雅的银饰，她以极其成熟专业的姿态，作为独立顾问陪伴着千万客户在商业的惊涛骇浪中平稳前行。</p>
+                        <p class="scene-text">
+                            偶有闲暇时望向窗外，她的思绪总会飘回青岛那个吹着海风的小沙滩。她欣慰地笑了——尽管已经走过了这么长的路，经历了这么多蜕变，但只要想起那座沙堡，她的灵魂里，依然是那个不慌不忙、温暖如初的小暖。
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo small">
+                    <img src="/xiaonuan.png" alt="小暖" class="logo-avatar small" width="24" height="24" style="width:24px;height:24px;min-width:24px;max-width:24px;min-height:24px;max-height:24px;object-fit:cover;border-radius:7px;display:block;" />
+                    <span class="logo-text">小暖</span>
+                </div>
+                <p>© 2026 HomeCore Team. Crafted with love for family.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="lightbox" class="lightbox" hidden>
+        <button type="button" class="lightbox-close" onclick="closeLightbox()" aria-label="关闭">×</button>
+        <img id="lightbox-img" alt="" />
+        <p id="lightbox-caption"></p>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        function switchTab(tabId, event, options) {
+            if (event) {
+                event.preventDefault();
+            }
+
+            document.querySelectorAll('.tab-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            const activeLink = (event && event.target.classList.contains('tab-link'))
+                ? event.target
+                : document.querySelector(`.tab-link[onclick*="'${tabId}'"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            const activeContent = document.getElementById(`tab-${tabId}`);
+            if (activeContent) {
+                activeContent.classList.add('active');
+
+                if (tabId === 'story') {
+                    setTimeout(triggerScrollDetect, 100);
+                }
+                setTimeout(() => lucide.createIcons(), 50);
+            }
+
+            if (!options || options.scroll !== false) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function goDownload(event) {
+            if (event) event.preventDefault();
+            const productTab = document.getElementById('tab-product');
+            if (!productTab.classList.contains('active')) {
+                switchTab('product', null, { scroll: false });
+            }
+            requestAnimationFrame(() => {
+                document.getElementById('download').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }
+
+        function goFaq(event) {
+            if (event) event.preventDefault();
+            const productTab = document.getElementById('tab-product');
+            if (!productTab.classList.contains('active')) {
+                switchTab('product', null, { scroll: false });
+            }
+            requestAnimationFrame(() => {
+                document.getElementById('faq').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }
+
+        function openLightbox(src, caption) {
+            const box = document.getElementById('lightbox');
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').textContent = caption || '';
+            box.hidden = false;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const box = document.getElementById('lightbox');
+            box.hidden = true;
+            document.getElementById('lightbox-img').src = '';
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target.id === 'lightbox') closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        const storyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        function triggerScrollDetect() {
+            document.querySelectorAll('.scene').forEach((el) => {
+                storyObserver.observe(el);
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        function initHeroCarousel() {
+            const root = document.querySelector('[data-carousel]');
+            if (!root) return;
+
+            const slides = [...root.querySelectorAll('.hero-slide')];
+            const dots = [...root.querySelectorAll('.hero-dot')];
+            const caption = root.querySelector('.hero-caption');
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            let index = 0;
+            let timer = null;
+
+            function go(next) {
+                index = (next + slides.length) % slides.length;
+                slides.forEach((slide, i) => slide.classList.toggle('is-active', i === index));
+                dots.forEach((dot, i) => dot.classList.toggle('is-active', i === index));
+                if (caption) caption.textContent = slides[index].dataset.caption || '';
+            }
+
+            function start() {
+                stop();
+                if (reduceMotion || slides.length < 2) return;
+                timer = setInterval(() => go(index + 1), 4500);
+            }
+
+            function stop() {
+                if (timer) clearInterval(timer);
+                timer = null;
+            }
+
+            root.querySelector('.hero-nav.prev').addEventListener('click', (e) => {
+                e.stopPropagation();
+                go(index - 1);
+                start();
+            });
+            root.querySelector('.hero-nav.next').addEventListener('click', (e) => {
+                e.stopPropagation();
+                go(index + 1);
+                start();
+            });
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    go(i);
+                    start();
+                });
+            });
+
+            root.addEventListener('mouseenter', stop);
+            root.addEventListener('mouseleave', start);
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) stop();
+                else start();
+            });
+
+            start();
+        }
+
+        function syncLatestRelease() {
+            const API_URL = 'https://api.github.com/repos/lepfinder/xiaonuan-releases/releases/latest';
+            fetch(API_URL)
+                .then(res => {
+                    if (!res.ok) throw new Error('Failed to fetch release info');
+                    return res.json();
+                })
+                .then(data => {
+                    if (!data || !data.tag_name) return;
+                    const version = data.tag_name.replace(/^v/, '').trim();
+                    if (!version) return;
+
+                    // 1. 同步全站所有版本标签
+                    document.querySelectorAll('.app-version-tag').forEach(el => {
+                        el.textContent = `v${version}`;
+                    });
+                    document.querySelectorAll('.app-version-badge').forEach(el => {
+                        el.textContent = `v${version} 稳定版`;
+                    });
+
+                    // 2. 动态定位 assets 或构造最新下载链接
+                    const assets = Array.isArray(data.assets) ? data.assets : [];
+                    const arm64Asset = assets.find(a => a.name && a.name.includes('arm64') && a.name.endsWith('.dmg'));
+                    const intelAsset = assets.find(a => a.name && !a.name.includes('arm64') && a.name.endsWith('.dmg'));
+                    const winAsset = assets.find(a => a.name && a.name.endsWith('.exe'));
+
+                    const arm64Filename = arm64Asset?.name || `XiaoNuan-${version}-arm64.dmg`;
+                    const intelFilename = intelAsset?.name || `XiaoNuan-${version}.dmg`;
+                    const winFilename = winAsset?.name || `XiaoNuan.Setup.${version}.exe`;
+
+                    const arm64Link = document.getElementById('download-arm64');
+                    const arm64Name = document.querySelector('.arm64-filename');
+                    const intelLink = document.getElementById('download-intel');
+                    const intelName = document.querySelector('.intel-filename');
+                    const winLink = document.getElementById('download-win');
+                    const winName = document.querySelector('.win-filename');
+
+                    if (arm64Link) arm64Link.href = arm64Asset?.browser_download_url || `https://github.com/lepfinder/xiaonuan-releases/releases/latest/download/${arm64Filename}`;
+                    if (arm64Name) arm64Name.textContent = arm64Filename;
+
+                    if (intelLink) intelLink.href = intelAsset?.browser_download_url || `https://github.com/lepfinder/xiaonuan-releases/releases/latest/download/${intelFilename}`;
+                    if (intelName) intelName.textContent = intelFilename;
+
+                    if (winLink) winLink.href = winAsset?.browser_download_url || `https://github.com/lepfinder/xiaonuan-releases/releases/latest/download/${winFilename}`;
+                    if (winName) winName.textContent = winFilename;
+                })
+                .catch(err => {
+                    console.debug('[ReleaseSync] Using static fallback:', err);
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            triggerScrollDetect();
+            initHeroCarousel();
+            syncLatestRelease();
+        });
+    </script>
+    <!-- 版本切换胶囊 (体验大楼版) -->
+    <aside class="version-switch-floating" aria-label="版本切换">
+        <a href="/" class="version-pill" title="切换到全新的温暖大楼生活长卷版">
+            <span class="version-dot"></span>
+            <span class="version-text">当前为经典视窗版 · 体验全新<strong>「一栋楼 · 生活长卷」</strong> ➔</span>
+        </a>
+    </aside>
+    <style>
+        .version-switch-floating {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+        }
+        .version-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            background: rgba(27, 54, 93, 0.92);
+            color: #fff;
+            border-radius: 999px;
+            font-size: 13px;
+            text-decoration: none;
+            box-shadow: 0 8px 24px rgba(27, 54, 93, 0.28), 0 2px 6px rgba(0,0,0,0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .version-pill:hover {
+            transform: translateY(-2px) scale(1.02);
+            background: #1b365d;
+            box-shadow: 0 12px 32px rgba(27, 54, 93, 0.38);
+        }
+        .version-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ffb84d;
+            box-shadow: 0 0 8px #ffb84d;
+            animation: pulse-dot 2s infinite;
+        }
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.85); }
+        }
+    </style>
+</body>
+
+</html>
